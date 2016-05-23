@@ -1,0 +1,15 @@
+*sqlite3
+*.pyc
+config/
+logging/
+logs/
+*.mo
+*.db
+*.mo
+test.rc
+*.bak
+fabric_settings*
+.idea/
+*.swp
+env/
+*.map
