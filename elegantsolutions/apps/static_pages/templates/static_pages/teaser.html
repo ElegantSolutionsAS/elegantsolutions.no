@@ -1,0 +1,18 @@
+{% extends "base_static.html" %}
+{% load i18n compress %}
+{% block css_block %}
+  {% compress css inline %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}static_pages/css/teaser.css" />
+  {% endcompress %}
+{% endblock %}
+
+{% block content %}
+  <div>
+    <h1>
+      Elegant Solutions
+      <br />
+      <br />
+      Coming soon
+    </h1>
+  </div>
+{% endblock %}

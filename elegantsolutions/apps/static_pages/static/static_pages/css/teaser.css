@@ -1,0 +1,39 @@
+body {
+  background-color: #000000;
+}
+
+h1 {
+  color: #636363;
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  -webkit-animation: show-teaser 4s;
+  animation: show-teaser 4s;
+
+}
+
+div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+@-webkit-keyframes show-teaser {
+  0% {color: #000000;}
+  25% {color: #000000;}
+  100% {color: #636363;}
+}
+
+@keyframes show-teaser {
+  0% {color: #000000;}
+  25% {color: #000000;}
+  100% {color: #636363;}
+}

@@ -1,0 +1,24 @@
+{% comment %}
+  This is a base template for static files.
+
+  It needs to mean and lean so that it renders quickly
+{% endcomment %}
+<!DOCTYPE html>
+<!--[if lt IE 9]> <html class="lt-IE9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html data-ng-app="prototype" class="js">
+<!--<![endif]-->
+  <head>
+    {% block head %}
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Nikola Trandafilovic">
+      <title>{{ view.document_title|default:"Elegant Solutions AS" }}</title>
+
+      {% block css_block %}{% endblock %}
+    {% endblock %}
+  </head>
+
+  <body>{% block content %}{% endblock %}{% block js_block %}{% endblock %}</body>
+</html>
