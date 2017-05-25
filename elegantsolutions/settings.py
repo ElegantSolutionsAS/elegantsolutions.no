@@ -83,6 +83,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'elegantsolutions.urls'
@@ -142,6 +143,15 @@ MEDIA_ROOT = os.path.join(
     "site_media",
     "media",
 )
+
+# Security settings override them in external config for deployment
+SECURE_SSL_REDIRECT = True
+SECURE_SSL_HOST = "elegantsolutions.no"
+SECURE_CONTENT_TYPE_NOSNIFF = SECURE_SSL_REDIRECT
+SECURE_BROWSER_XSS_FILTER = SECURE_SSL_REDIRECT
+SESSION_COOKIE_SECURE = SECURE_SSL_REDIRECT
+CSRF_COOKIE_SECURE = SECURE_SSL_REDIRECT
+X_FRAME_OPTIONS = "DENY"
 
 if os.path.exists(
         os.path.abspath(os.path.join(BASE_DIR, 'config/settings.py'))):

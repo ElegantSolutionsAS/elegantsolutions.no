@@ -1,7 +1,7 @@
 ipython==5.0.0
 python-memcached==1.58
 
-Django>=1.9,<1.10
+Django>=1.11,<1.12
 django-compressor==1.5
 django-debug-toolbar==1.5
 django-extensions==1.6.7
